@@ -1,7 +1,7 @@
 # Logic-Step
 
 在.sh文件目录下：
-**RUN SH** </br>
+##RUN SH </br>
 **nohup bash run_pipeline.sh > pipeline.log 2>&1 &** //一次性运行所有 </br>
 **RUN RETRIEVER** </br>
 **nohup bash run_retriever.sh > run_retriever.log 2>&1 &**//运行训练编码器的代码 CUDA设置在/data/yangcheng/aaai/model/3_finetune_retriever.py第17行</br> 
