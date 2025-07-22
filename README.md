@@ -16,7 +16,7 @@ RUN buildknowlege </br>
 
 RUN buildgeneratordata </br> 
 ---
-**nohup bash run_buildgeneratordata.sh >run_buildgeneratordata.log 2>&1 &**//运行构建训练生成器的代码 不用设置CUDA</br>
+**nohup bash run_buildgeneratordata.sh >run_buildgeneratordata.log 2>&1 &**//运行构建生成器数据的代码 不用设置CUDA</br>
 
 RUN finetunegenerator</br>
 ---
