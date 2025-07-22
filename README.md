@@ -2,13 +2,19 @@
 
 在.sh文件目录下：
 RUN SH </br>
-=========
+---
 **nohup bash run_pipeline.sh > pipeline.log 2>&1 &** //一次性运行所有 </br>
-**RUN RETRIEVER** </br>
+
+RUN RETRIEVER </br>
+---
 **nohup bash run_retriever.sh > run_retriever.log 2>&1 &**//运行训练编码器的代码 CUDA设置在/data/yangcheng/aaai/model/3_finetune_retriever.py第17行</br> 
-**RUN buildknowlege** </br> 
+
+RUN buildknowlege </br>
+---
 **nohup bash run_buildknowlege.sh >run_buildknowlege.log 2>&1 &**//运行构建知识库的代码 不用设置CUDA</br>
-**RUN buildgeneratordata** </br> 
+
+RUN buildgeneratordata </br> 
+---
 **nohup bash run_buildgeneratordata.sh >run_buildgeneratordata.log 2>&1 &**//运行构建训练生成器的代码 不用设置CUDA</br>
 **RUN finetunegenerator**</br>
 **nohup bash run_finetunegeneratorllama7B.sh >run_finetunegeneratorllama7B.log  2>&1 &**// 运行训练llama7B的代码 CUDA设置在/data/yangcheng/aaai/model/7_finetune_generator2.py第21行</br>
