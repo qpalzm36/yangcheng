@@ -6,24 +6,24 @@
 **RUN RETRIEVER** </br>
 **nohup bash run_retriever.sh > run_retriever.log 2>&1 &**//运行训练编码器的代码 CUDA设置在/data/yangcheng/aaai/model/3_finetune_retriever.py第17行</br> 
 **RUN buildknowlege** </br> 
-**nohup bash run_buildknowlege.sh 2>&1 &**//运行构建知识库的代码 不用设置CUDA</br>
+**nohup bash run_buildknowlege.sh >run_buildknowlege.log 2>&1 &**//运行构建知识库的代码 不用设置CUDA</br>
 **RUN buildgeneratordata** </br> 
-**nohup bash run_buildgeneratordata.sh 2>&1 &**//运行构建训练生成器的代码 不用设置CUDA</br>
+**nohup bash run_buildgeneratordata.sh >run_buildgeneratordata.log 2>&1 &**//运行构建训练生成器的代码 不用设置CUDA</br>
 **RUN finetunegenerator**</br>
-**nohup bash run_finetunegeneratorllama7B.sh  2>&1 &**// 运行训练llama7B的代码 CUDA设置在/data/yangcheng/aaai/model/7_finetune_generator2.py第21行</br>
-**nohup bash run_finetunegeneratorllama8B.sh  2>&1 &**// 运行训练llama8B的代码 CUDA设置在/data/yangcheng/aaai/model/7_finetune_generatorllama2_7B.py第21行</br>
-**nohup bash run_finetunegeneratorqwen3B.sh  2>&1 &**// 运行训练qwen3B的代码 CUDA设置在/data/yangcheng/aaai/model/7_finetune_generatorllama3_8B.py第21行</br>
-**nohup bash run_finetunegeneratorqwen7B.sh  2>&1 &**// 运行训练qwen7B的代码 CUDA设置在/data/yangcheng/aaai/model/7_finetune_generatorqwen7B.py第21行</br>
+**nohup bash run_finetunegeneratorllama7B.sh >run_finetunegeneratorllama7B.log  2>&1 &**// 运行训练llama7B的代码 CUDA设置在/data/yangcheng/aaai/model/7_finetune_generator2.py第21行</br>
+**nohup bash run_finetunegeneratorllama8B.sh >run_finetunegeneratorllama8B.log 2>&1 &**// 运行训练llama8B的代码 CUDA设置在/data/yangcheng/aaai/model/7_finetune_generatorllama2_7B.py第21行</br>
+**nohup bash run_finetunegeneratorqwen3B.sh >run_finetunegeneratorqwen3B.log  2>&1 &**// 运行训练qwen3B的代码 CUDA设置在/data/yangcheng/aaai/model/7_finetune_generatorllama3_8B.py第21行</br>
+**nohup bash run_finetunegeneratorqwen7B.sh >run_finetunegeneratorqwen7B.log  2>&1 &**// 运行训练qwen7B的代码 CUDA设置在/data/yangcheng/aaai/model/7_finetune_generatorqwen7B.py第21行</br>
 **RUN run_inference**</br>
-**nohup bash run_inferencellama7B.sh all 2>&1 &** //运行推理llama7B的代码 这个文件可以在sh文件里面直接设置CUDA</br> 
-**nohup bash run_inferencellama8B.sh all 2>&1 &** //运行推理llama8B的代码 这个文件可以在sh文件里面直接设置CUDA</br> 
-**nohup bash run_inferenceqwen3B.sh all 2>&1 &** //运行推理qwen3B的代码  CUDA设置都设置成第一张卡了，如果要改的话，分别在/data/yangcheng/aaai/model/8_run_inference_final_fixed.py第170行，/data/yangcheng/aaai/model/8_run_inference_final_fixedaime.py第152行，/data/yangcheng/aaai/model/8_run_inference_final_fixedGSM.py第139行，/data/yangcheng/aaai/model/8_run_inference_final_fixedmath.py第170行</br>
-**nohup bash run_inferenceqwen7B.sh all 2>&1 &** //运行推理qwen7B的代码  CUDA都设置成第一张卡了，如果要改的话，分别在/data/yangcheng/aaai/model/8_run_inference_final_fixedqwen7B.py第169行，/data/yangcheng/aaai/model/8_run_inference_final_fixedqwen7Baime.py第137行，/data/yangcheng/aaai/model/8_run_inference_final_fixedqwen7BGSM.py第125行，/data/yangcheng/aaai/model/8_run_inference_final_fixedqwen7Bmath.py第151行</br>
+**nohup bash run_inferencellama7B.sh all >run_inferencellama7B.log 2>&1 &** //运行推理llama7B的代码 这个文件可以在sh文件里面直接设置CUDA</br> 
+**nohup bash run_inferencellama8B.sh all >run_inferencellama8B.log 2>&1 &** //运行推理llama8B的代码 这个文件可以在sh文件里面直接设置CUDA</br> 
+**nohup bash run_inferenceqwen3B.sh all >run_inferenceqwen3B.log 2>&1 &** //运行推理qwen3B的代码  CUDA设置都设置成第一张卡了，如果要改的话，分别在/data/yangcheng/aaai/model/8_run_inference_final_fixed.py第170行，/data/yangcheng/aaai/model/8_run_inference_final_fixedaime.py第152行，/data/yangcheng/aaai/model/8_run_inference_final_fixedGSM.py第139行，/data/yangcheng/aaai/model/8_run_inference_final_fixedmath.py第170行</br>
+**nohup bash run_inferenceqwen7B.sh all >run_inferenceqwen3B.log 2>&1 &** //运行推理qwen7B的代码  CUDA都设置成第一张卡了，如果要改的话，分别在/data/yangcheng/aaai/model/8_run_inference_final_fixedqwen7B.py第169行，/data/yangcheng/aaai/model/8_run_inference_final_fixedqwen7Baime.py第137行，/data/yangcheng/aaai/model/8_run_inference_final_fixedqwen7BGSM.py第125行，/data/yangcheng/aaai/model/8_run_inference_final_fixedqwen7Bmath.py第151行</br>
 **RUN evaluate**</br>
-**nohup bash run_evaluateqwen3B.sh all > run_evaluateqwen3B.log > 2&1 &** //运行评估qwen3B的代码 不需要设置CUDA </br>
-**nohup bash run_evaluateqwen7B.sh all > run_evaluateqwen7B.log > 2>&1 &** //运行评估qwen7B的代码 不需要设置CUDA</br>
-**nohup bash run_evaluateqwenllama7B.sh all > run_evaluatellama7B.log > 2>&1 &** // 运行评估llama7B的代码 不需要设置CUDA</br>
-**nohup bash run_evaluateqwenllama8B.sh all > run_evaluatellama8.log > 2>&1 &** // 运行评估llama8B的代码 不需要设置CUDA</br>
+**nohup bash run_evaluateqwen3B.sh all > run_evaluateqwen3B.log 2&1 &** //运行评估qwen3B的代码 不需要设置CUDA </br>
+**nohup bash run_evaluateqwen7B.sh all > run_evaluateqwen7B.log 2>&1 &** //运行评估qwen7B的代码 不需要设置CUDA</br>
+**nohup bash run_evaluateqwenllama7B.sh all > run_evaluatellama7B.log 2>&1 &** // 运行评估llama7B的代码 不需要设置CUDA</br>
+**nohup bash run_evaluateqwenllama8B.sh all > run_evaluatellama8.log 2>&1 &** // 运行评估llama8B的代码 不需要设置CUDA</br>
 也可以直接nohup bash run_pipeline.sh evaluation > pipelineevaluation.log 2>&1 & 执行评估的所有代码</br>
 
 </br>
