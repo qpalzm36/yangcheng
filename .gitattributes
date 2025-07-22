@@ -1,0 +1,2 @@
+aaai/data/traindata/retrieverdata/retriever_training_data.jsonl filter=lfs diff=lfs merge=lfs -text
+aaai/knowledgebase/faiss_index.bin filter=lfs diff=lfs merge=lfs -text
