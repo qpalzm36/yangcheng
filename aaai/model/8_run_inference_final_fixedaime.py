@@ -149,7 +149,7 @@ def extract_final_answer_robust(generated_steps: list) -> str:
 
 # --- 配置 ---
 # 保留原有的GPU固定设置
-os.environ["CUDA_VISIBLE_DEVICES"] = "1,2,3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 MAX_NEW_TOKENS = 512  
 MAX_STEPS = 12        
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -247,7 +247,7 @@ def run_inference_vllm(generator_model_path, retriever_model_path, knowledge_bas
         tensor_parallel_size=1,
         max_model_len=4096,
         trust_remote_code=True,
-        gpu_memory_utilization=0.4,  # 降低显存使用率
+        gpu_memory_utilization=0.95,  # 降低显存使用率
         dtype="bfloat16",
         enforce_eager=True
     )
