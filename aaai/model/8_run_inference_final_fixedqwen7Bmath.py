@@ -246,7 +246,7 @@ def run_inference_vllm(args):
         tensor_parallel_size=1,
         max_model_len=4096,
         trust_remote_code=True,
-        gpu_memory_utilization=0.4,  # 降低显存使用率
+        gpu_memory_utilization=0.95,  # 降低显存使用率
         dtype="bfloat16",
         enforce_eager=True
     )
