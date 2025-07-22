@@ -24,7 +24,7 @@
 **nohup bash run_evaluateqwen7B.sh all > run_evaluateqwen7B.log > 2>&1 &** //运行评估qwen7B的代码 不需要设置CUDA</br>
 **nohup bash run_evaluateqwenllama7B.sh all > run_evaluatellama7B.log > 2>&1 &** // 运行评估llama7B的代码 不需要设置CUDA</br>
 **nohup bash run_evaluateqwenllama8B.sh all > run_evaluatellama8.log > 2>&1 &** // 运行评估llama8B的代码 不需要设置CUDA</br>
-也可以直接nohup bash /data/yangcheng/run_pipeline.sh evaluation > pipelineevaluation.log 2>&1 & 执行评估的所有代码</br>
+也可以直接nohup bash run_pipeline.sh evaluation > pipelineevaluation.log 2>&1 & 执行评估的所有代码</br>
 
 </br>
 </br>
